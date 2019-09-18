@@ -12,6 +12,8 @@
     <input type="submit" value="Add It"/>
 </form>
 
+{% if watchlist|length == 0 %}
+{% else %}
 <form action="/crossoff" method="post">
     <label>
         I want to cross off
@@ -25,6 +27,7 @@
     </label>
     <input type="submit" value="Cross It Off"/>
 </form>
+{% endif %}
 
 {% if watchlist|length == 0 %}
 <p>No Watchlist Yet</p>
